@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 75px;
+  /* NOTE: this uses the dense packing algorithm to move the items around to fill out the gaps in the grid ('Source Order Indepenance') : */
+  grid-auto-flow: dense;
+}
+
+/* NOTE: we have images of varying size so we have to make sure they are ready to be part of the grid: */
+.horizontal {
+  grid-column: auto / span 2;
+  /* NOTE: Same as:
+    grid-column: span 2 */
+}
+
+.vertical {
+  grid-row: span 2;
+}
+
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
