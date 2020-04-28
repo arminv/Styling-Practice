@@ -1,0 +1,37 @@
+/* NOTE: Template areas are a great way to prototype quickly and come up with an idea:  */
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px auto 40px;
+  /* NOTE: this enables the use of template areas, a visual representation of the grid itself (. is a blank cell) : */
+  /* NOTE: areas only valid if they are rectangles! */
+  grid-template-areas:
+    '. h h h h h h h h h h h'
+    'm c c c c c c c c c c c'
+    '. f f f f f f f f f f f';
+}
+
+.header {
+  /* NOTE: -1 represents the end here: */
+  /* grid-column: 1 / -1; */
+
+  /* NOTE: now we specify the names we used in the template area: */
+  grid-area: h;
+}
+
+.menu {
+  grid-area: m;
+}
+
+.content {
+  /* grid-column: 2 / -1; */
+  grid-area: c;
+}
+
+.footer {
+  /* grid-column: 1 / -1; */
+  grid-area: f;
+}
