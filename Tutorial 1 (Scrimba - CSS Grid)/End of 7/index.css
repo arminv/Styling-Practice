@@ -1,0 +1,8 @@
+.container {
+  display: grid;
+  grid-gap: 5px;
+  /* NOTE: auto-fit varies the number of columns based on screen size: */
+  /* NOTE: minmax() here means that columns will have a width of at least 100px but can have width of 1fr if there is enough space: */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);
+}
