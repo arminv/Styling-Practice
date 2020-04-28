@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  /* NOTE: implicit rows are the ones that are automatically added (not specified by us). To make sure they have the right height we need to do this: */
+  grid-auto-rows: 100px;
+  /* NOTE: now we don't even need to explicitly define each row: */
+  /* grid-template-rows: 100px 100px; */
+}
